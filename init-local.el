@@ -40,5 +40,6 @@
 (require 'init-wylin-cc-auto-complete)
 (require 'init-transparency)
 ;;(require 'init-chinese-code)
+(require 'init-plantuml)
 
 (provide 'init-local)
