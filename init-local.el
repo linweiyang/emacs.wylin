@@ -41,5 +41,7 @@
 (require 'init-transparency)
 ;;(require 'init-chinese-code)
 (require 'init-plantuml)
+(require 'init-cmake-ide)
+
 
 (provide 'init-local)
