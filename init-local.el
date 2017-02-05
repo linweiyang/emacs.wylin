@@ -42,6 +42,6 @@
 ;;(require 'init-chinese-code)
 (require 'init-plantuml)
 (require 'init-cmake-ide)
-
+(require 'init-maxima)
 
 (provide 'init-local)
