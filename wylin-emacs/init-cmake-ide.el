@@ -1,5 +1,6 @@
 (require-package 'flycheck)
 (require-package 'auto-complete-clang)
+(require-package 'auto-complete-clang-async)
 (require-package 'company)
 (require-package 'helm)
 (require-package 'irony)
