@@ -23,9 +23,14 @@
 Rtags URL: https://github.com/Andersbakken/rtags  
 Rtags is a c/c++ client/server indexer for c/c++/objc[++] with integration for Emacs based on clang.  
 Rtags need helm packge, but the helm package only supports emacs version >= 24.4. User need to install emacs 24.4 or higher version.  
-(User can also compile emacs using the link : http://ubuntuhandbook.org/index.php/2014/10/emacs-24-4-released-install-in-ubuntu-14-04/)  
+1. Provided packages for LTS 14.04 and 16.04. Stable versions (25.1 currently):  
+	sudo apt-add-repository -y ppa:adrozdoff/emacs  
+	sudo apt update  
+	sudo apt install emacs25  
+2. Or compile emacs by yourself : http://ubuntuhandbook.org/index.php/2014/10/emacs-24-4-released-install-in-ubuntu-14-04/  
+
 -----------
-The following shows how to rtags:  
+Prepare for installing rtags:  
 for Ubuntu : sudo apt-get install llvm clang libclang-dev openssl  
 for OSX or macOS : brew install llvm --with-libcxx --with-clang --without-assertions --with-rtti  
 
