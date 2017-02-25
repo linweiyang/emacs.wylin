@@ -16,11 +16,6 @@
 (add-hook 'c-mode-hook 'my:ac-c-header-init)
 
 
-
-;; Fix iedit bug in Mac
-(require-package 'iedit)
-(define-key global-map (kbd "C-c ;") 'iedit-mode)
-
 ;;start flymake-google-cpplint-load
 ;;let's define a function for flymake initialization
 ;;step 1. install cpplint with "sudo pip install cpplint" command (install python-pip first)
@@ -40,6 +35,8 @@
 (require 'google-c-style)
 (add-hook 'c-mode-common-hook 'google-c-style)
 (add-hook 'c-mode-common-hook 'google-make-newline-indent)
+(add-hook 'c++-mode-common-hook 'google-c-style)
+(add-hook 'c++-mode-common-hook 'google-make-newline-indent)
 
 ;; install cedet mode for true intellisensep
 (require 'semantic)
