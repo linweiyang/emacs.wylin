@@ -51,9 +51,10 @@ $ make
 $ sudo make install  
 
 Usage:  
-cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=1 ..  
+In a cmake project using the following command to compile the source code   
+$ cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=1 ..  
 
-In simple method, add cmake-rtags to .bashrc  
+In simple method, please add cmake-rtags to .bashrc  
 $ echo alias cmake-rtags=\'cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=1\' >> ~/.bashrc
 
 
