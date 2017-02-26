@@ -13,9 +13,9 @@
 	sudo pip install cpplint  
 
 4. Change 'Caps' to 'Ctrl' (not swap), create ~/.Xmodmap file in Linux:  
-	remove Lock = Caps_Lock  
-	keysym Caps_Lock = Control_L  
-	add control = Control_L  
+\ \ remove Lock = Caps_Lock  
+\ \ keysym Caps_Lock = Control_L  
+\ \ add control = Control_L  
 	
 	(In ubuntu 14 or 16, we need to add "xmodmap ~/.Xmodmap" at the end of ~/.xinputc file.)  
 
@@ -43,11 +43,18 @@ NOTE:
 -----------
 Install rtags.  
 git clone --recursive https://github.com/Andersbakken/rtags.git  
-cd rtags  
-mkdir build  
-cd build  
-cmake ..  
-make  
-sudo make install  
+$ cd rtags  
+$ mkdir build  
+$ cd build  
+$ cmake ..  
+$ make  
+$ sudo make install  
+
+Usage:  
+cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=1 ..  
+
+In simple method, add cmake-rtags to .bashrc  
+$ echo alias cmake-rtags=\'cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=1\' >> ~/.bashrc
+
 
 # Start emacs and enjoy yourself :)
