@@ -1,21 +1,21 @@
 # Install emacs configuration
 1. If you don't have purcell's configuration of emacs, please install it with the following command.  
-	git clone https://github.com/purcell/emacs.d ~/.emacs.d  
+	$ git clone https://github.com/purcell/emacs.d ~/.emacs.d  
 
 2. Install my emacs configuration.  
-	git clone https://github.com/linweiyang/emacs.wylin  
-	cd emacs.wylin  
-	cp init-local.el ~/.emacs.d/lisp/init-local.el  
-	cp -r wylin-emacs ~/.emacs.d/lisp/wylin-emacs  
+	$ git clone https://github.com/linweiyang/emacs.wylin  
+	$ cd emacs.wylin  
+	$ cp init-local.el ~/.emacs.d/lisp/init-local.el  
+	$ cp -r wylin-emacs ~/.emacs.d/lisp/wylin-emacs  
 
 3. For google cpplint.  
-	sudo apt-get install python-pip  
-	sudo pip install cpplint  
+	$ sudo apt-get install python-pip  
+	$ sudo pip install cpplint  
 
 4. Change 'Caps' to 'Ctrl' (not swap), create ~/.Xmodmap file in Linux:  
-\ \ remove Lock = Caps_Lock  
-\ \ keysym Caps_Lock = Control_L  
-\ \ add control = Control_L  
+   remove Lock = Caps_Lock  
+   keysym Caps_Lock = Control_L  
+   add control = Control_L  
 	
 	(In ubuntu 14 or 16, we need to add "xmodmap ~/.Xmodmap" at the end of ~/.xinputc file.)  
 
@@ -24,14 +24,14 @@ Rtags URL: https://github.com/Andersbakken/rtags
 Rtags is a c/c++ client/server indexer for c/c++/objc[++] with integration for Emacs based on clang.  
 Rtags need helm packge, but the helm package only supports emacs version >= 24.4. User need to install emacs 24.4 or higher version.  
 1. Provided packages for LTS 14.04 and 16.04. Stable versions (25.1 currently):  
-	sudo apt-add-repository -y ppa:adrozdoff/emacs  
-	sudo apt update  
-	sudo apt install emacs25  
+	$ sudo apt-add-repository -y ppa:adrozdoff/emacs  
+	$ sudo apt update  
+	$ sudo apt install emacs25  
 2. Or compile emacs by yourself : http://ubuntuhandbook.org/index.php/2014/10/emacs-24-4-released-install-in-ubuntu-14-04/  
 
 -----------
 Prepare for installing rtags:  
-for Ubuntu : sudo apt-get install llvm clang libclang-dev openssl  
+for Ubuntu :       sudo apt-get install llvm clang libclang-dev openssl  
 for OSX or macOS : brew install llvm --with-libcxx --with-clang --without-assertions --with-rtti  
 
 NOTE:  
@@ -42,7 +42,7 @@ NOTE:
 
 -----------
 Install rtags.  
-git clone --recursive https://github.com/Andersbakken/rtags.git  
+$ git clone --recursive https://github.com/Andersbakken/rtags.git  
 $ cd rtags  
 $ mkdir build  
 $ cd build  
