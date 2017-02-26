@@ -10,7 +10,9 @@
 ;;使用增强列表
 (require-package 'pos-tip)
 (require 'pos-tip)
-(setq ac-quick-help-prefer-pos-tip)
+(when (not (eq system-type 'darwin))
+  (setq ac-quick-help-prefer-pos-tip)
+  )
 ;;启用默认ac设置
 (ac-config-default)
 (auto-complete-mode 1)
