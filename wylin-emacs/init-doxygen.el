@@ -12,7 +12,7 @@
           (c++-mode  . javadoc)))
   (set-face-foreground 'font-lock-doc-face
                        (face-foreground font-lock-comment-face)))
-(add-hook 'c++-initialization-hook 'my-cc-init-hook)
-;;(my-cc-init-hook)
+;;(add-hook 'c++-initialization-hook 'my-cc-init-hook)
+(my-cc-init-hook)
 
 (provide 'init-doxygen)

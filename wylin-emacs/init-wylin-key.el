@@ -1,6 +1,6 @@
 ;;(global-set-key "\d" 'delete-char)
 (when *is-a-mac*
-  (global-set-key (kbd "¥") "\\")
+  (global-set-key (kbd "¥") "\\") ;; for my hhkb lite keyboard.
 
   ;; Fix iedit bug in Mac
   (require-package 'iedit)
