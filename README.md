@@ -7,6 +7,10 @@
 	$ cd emacs.wylin  
 	$ cp init-local.el ~/.emacs.d/lisp/init-local.el  
 	$ cp -r wylin-emacs ~/.emacs.d/lisp/wylin-emacs  
+    
+    <font color=#ff0000>NOTE: Recommend to use Chinese mirror in China.</font>  
+    cp mirror/init-elpa.el ~/.emacs.d/lisp/lisp/init-elpa.el
+    
 
 3. For google cpplint.  
 	$ sudo apt-get install python-pip  
@@ -34,7 +38,7 @@ Prepare for installing rtags:
 for Ubuntu :       sudo apt-get install llvm clang libclang-dev openssl  
 for OSX or macOS : brew install llvm --with-libcxx --with-clang --without-assertions --with-rtti  
 
-NOTE:  
+<font color=#ff0000>NOTE:</font>  
 1. LLVM/Clang >= 3.3  
 2. GCC/Clang >= 4.7/3.2  
 3. cmake >= 2.8  
