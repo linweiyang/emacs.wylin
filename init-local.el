@@ -26,7 +26,7 @@
 (require 'init-maxima)
 (require 'init-wylin-org)
 (require 'init-wylin-swiper)
-;;(require 'init-wylin-reveal)
+;; (require 'init-wylin-reveal)
 (require 'init-wylin-key)
 
 (provide 'init-local)
