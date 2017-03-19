@@ -15,7 +15,7 @@
 (require 'init-ctags)
 (require 'init-doxygen)
 (require 'init-auctex)
-;; (require 'init-science)
+;;(require 'init-science)
 (require 'init-wylin-auto-complete)
 (require 'init-wylin-cc-auto-complete)
 (require 'init-transparency)
@@ -26,7 +26,7 @@
 (require 'init-maxima)
 (require 'init-wylin-org)
 (require 'init-wylin-swiper)
-;; (require 'init-wylin-reveal)
+;;(require 'init-wylin-reveal)
 (require 'init-wylin-key)
 
 (provide 'init-local)

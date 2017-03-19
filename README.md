@@ -9,41 +9,51 @@ This emacs configuration is based on [Purcell's emacs configuration](https://git
   - [Preparation for rtags](#preparation-for-rtags)
   - [Compile and install](#compile-and-install)
   - [Usage](#usage)
+- [Config Package](#config-package)
+  - [MarkDown Mode](#markdown-mode)
+  - []
 
 #### More reading
 - [Purcell's emacs](https://github.com/purcell/emacs.d): Most powerfull emacs configuration version.
 - [Rtags](https://github.com/Andersbakken/rtags): client/server application for indexing C/C++ code.
-- [Pandoc](http://pandoc.org/installing.html): Powerful document converter, it's used for markdown preview (shortcut: C-c C-c p).
 
-## Install emacs configuration  
-1. If you don't have purcell's configuration of emacs, please install it with the following command.  
-```bash
-    git clone https://github.com/purcell/emacs.d ~/.emacs.d  
-```
+## Install emacs configuration
+
+1. If you don't have purcell's configuration of emacs, please install it with the following command.
+
+    ``` shell
+        git clone https://github.com/purcell/emacs.d ~/.emacs.d
+    ```
 
 2. Install my emacs configuration.
-```bash
-	git clone https://github.com/linweiyang/emacs.wylin  
-	cd emacs.wylin  
-	cp init-local.el ~/.emacs.d/lisp/init-local.el  
-	cp -r wylin-emacs ~/.emacs.d/lisp/wylin-emacs  
-```
+
+    ``` shell
+	    git clone https://github.com/linweiyang/emacs.wylin
+	    cd emacs.wylin
+	    cp init-local.el ~/.emacs.d/lisp/init-local.el
+	    cp -r wylin-emacs ~/.emacs.d/lisp/wylin-emacs
+    ```
+
     <font color=#ff0000>NOTE:</font> Recommend to use chinese elpa mirror in China.
-    ```bash
-    cp mirror/init-elpa.el ~/.emacs.d/lisp/lisp/init-elpa
+
+    ``` shell
+        cp mirror/init-elpa.el ~/.emacs.d/lisp/lisp/init-elpa
     ```
 3. For google cpplint.
-```bash
-	sudo apt-get install python-pip  
-	sudo pip install cpplint
-```
+
+    ``` shell
+	    sudo apt-get install python-pip
+	    sudo pip install cpplint
+    ```
 
 4. Change 'Caps' to 'Ctrl' (not swap), create ~/.Xmodmap file in Linux:
-```xmodmap
-   remove Lock = Caps_Lock
-   keysym Caps_Lock = Control_L
-   add control = Control_L
-```	
+
+    ``` xmodmap
+        remove Lock = Caps_Lock
+        keysym Caps_Lock = Control_L
+        add control = Control_L
+    ```
+
 	(In ubuntu 14 or 16, we need to add command "xmodmap ~/.Xmodmap" at the end of ~/.xinputc file.)  
 
 ## Install rtags for cmake-ide
@@ -55,21 +65,27 @@ This emacs configuration is based on [Purcell's emacs configuration](https://git
 Rtags package for emacs needs helm packge, but the helm package only supports emacs version >= 24.4. User need to install emacs 24.4 or higher version. Here are two methods for install high emacs version.
 
 1. Provided packages for Ubuntu LTS 14.04 and 16.04. Stable versions (25.1 currently):
-```bash
-	sudo apt-add-repository -y ppa:adrozdoff/emacs
-	sudo apt update
-	sudo apt install emacs25
-```
+
+    ``` shell
+	    sudo apt-add-repository -y ppa:adrozdoff/emacs
+	    sudo apt update
+	    sudo apt install emacs25
+    ```
+
 2. Or compile emacs by yourself (http://ubuntuhandbook.org/index.php/2014/10/emacs-24-4-released-install-in-ubuntu-14-04/).
 
-### Preparation for rtags  
+### Preparation for rtags
+
 In Ubuntu
-```bash
-sudo apt-get install llvm clang libclang-dev openssl
+
+``` shell
+    sudo apt-get install llvm clang libclang-dev openssl
 ```
+
 In OSX or macOS
-```bash
-brew install llvm --with-libcxx --with-clang --without-assertions --with-rtti
+
+``` shell
+    brew install llvm --with-libcxx --with-clang --without-assertions --with-rtti
 ```
 
 <font color=#ff0000>NOTE:</font>  
@@ -79,7 +95,8 @@ brew install llvm --with-libcxx --with-clang --without-assertions --with-rtti
     - emacs >= 24.4 is recommended  
 
 ### Compile and install
-```bash
+
+``` shell
     git clone --recursive https://github.com/Andersbakken/rtags.git
     cd rtags
     mkdir build
@@ -91,10 +108,32 @@ brew install llvm --with-libcxx --with-clang --without-assertions --with-rtti
 
 ### Usage
 In a cmake project using the following command to compile the source code
-```bash
+
+``` shell
     cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=1 ..
 ```
+
 In simple method, please add cmake-rtags to .bashrc using the following command:
-```bash
+
+``` shell
     echo alias cmake-rtags=\'cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=1\' >> ~/.bashrc
 ```
+
+## Config Package
+
+### Markdown Mode
+
+Install markdown for markdown-mode, the preview shortcut is C-c C-c p.
+
+In Ubuntu
+
+``` shell
+    sudo apt-get install markdown
+```
+
+In OSX or macOS
+
+``` shell
+    brew install markdown
+```
+

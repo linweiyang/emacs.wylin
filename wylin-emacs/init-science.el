@@ -1,4 +1,5 @@
 (require-package 'matlab-mode)
+(require 'matlab-mode)
 ;; matlab shell
 ;; matlab-emacs
 (add-to-list 'load-path "path/to/matlab-emacs")
@@ -17,6 +18,7 @@
                                         ;(matlab-mode-hilit)
 (autoload 'tlc-mode "tlc" "tlc Editing Mode" t)
 (add-to-list 'auto-mode-alist '("//.tlc{1}quot; . tlc-mode))
+
 (setq tlc-indent-function t)
 
 (custom-set-variables
