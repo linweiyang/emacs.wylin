@@ -43,14 +43,14 @@ This emacs configuration is based on [Purcell's emacs configuration](https://git
     ```
 3. For google cpplint.
 
-**In Ubuntu**  
+    **In Ubuntu**  
 
     ``` shell
     sudo apt-get install python-pip
     sudo pip install cpplint
     ```
     
-**In OSX or macOS**  
+    **In OSX or macOS**  
 
     ``` shell
     pip install cpplint
