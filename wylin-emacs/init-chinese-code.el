@@ -1,6 +1,6 @@
 ;;(set-face-attribute 'default nil :height font_size)
 (when *is-a-mac*
-  (set-face-attribute 'default nil :font "Monaco 16" :height font_size);;  ;; ;;
+  (set-face-attribute 'default nil :font "Monaco 16" :height font_size)
   (set-fontset-font "fontset-default" 'gb18030' ("Microsoft YaHei" . "unicode-bmp"))
   )
 
