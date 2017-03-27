@@ -7,6 +7,6 @@
   (define-key global-map (kbd "C-c ;") 'iedit-mode)
   )
 
-(global-set-key "\C-h" 'backward-delete-char-untabify)
+(global-set-key "\C-h" 'backward-delete-char)
 
 (provide 'init-wylin-key)

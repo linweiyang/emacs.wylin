@@ -39,18 +39,18 @@ This emacs configuration is based on [Purcell's emacs configuration](https://git
     <font color=#ff0000>NOTE:</font> Recommend to use chinese elpa mirror in China.
 
     ``` shell
-    cp mirror/init-elpa.el ~/.emacs.d/lisp/lisp/init-elpa
+    cp mirror/init-elpa.el ~/.emacs.d/lisp/init-elpa.el
     ```
 3. For google cpplint.
 
-    * In Ubuntu
+    * **In Ubuntu**
 
     ``` shell
     sudo apt-get install python-pip
     sudo pip install cpplint
     ```
     
-    **In OSX or macOS**  
+    * **In OSX or macOS**  
 
     ``` shell
     pip install cpplint
