@@ -19,7 +19,7 @@
 (require 'init-wylin-auto-complete)
 (require 'init-wylin-cc-auto-complete)
 (require 'init-transparency)
-(require 'init-chinese-code)
+;;(require 'init-chinese-code)
 (require 'init-plantuml)
 (require 'init-cuda)
 (require 'init-cmake-ide)
