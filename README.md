@@ -47,6 +47,7 @@ This emacs configuration is based on [Purcell's emacs configuration](https://git
 
     ``` shell
     sudo apt-get install python-pip
+    pip install --upgrade pip
     pip install cpplint
     ```
     
