@@ -21,9 +21,10 @@
 (setq-default TeX-master nil)
 
 (add-hook 'LaTeX-mode-hook 'visual-line-mode)
-(add-hook 'LaTeX-mode-hook 'flyspell-mode)
 (add-hook 'LaTeX-mode-hook 'ac-flyspell-workaround)
 (add-hook 'LaTeX-mode-hook 'LaTeX-math-mode)
+;; flyspell-mode has a conflict of commom shortcuts, if you want to use it M-x flyspell-mode
+;;(add-hook 'LaTeX-mode-hook 'flyspell-mode)
 
 ;; enable auto-fill mode, nice for text
 (add-hook 'LaTeX-mode-hook 'auto-fill-mode)

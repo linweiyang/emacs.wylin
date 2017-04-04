@@ -11,6 +11,7 @@ This emacs configuration is based on [Purcell's emacs configuration](https://git
   - [Usage](#usage)
 - [Config Package](#config-package)
   - [MarkDown Mode](#markdown-mode)
+  - [avy Mode](#avy-mode)
 
 
 #### More reading
@@ -154,4 +155,11 @@ In OSX or macOS
 ``` shell
 brew install markdown
 ```
+
+### avy Mode
+If your Ubuntu has installed fcitx, "Ctrl+;" shortcut will be set to "Trigger Key for Clipboard History List" by default, please disable it by following steps.
+
+1. $ fcitx-config-gtk3  
+2. In "Addon" -> "Clipboard" -> "Trigger Key for Clipboard History List", remove the shortcut.  
+
 
