@@ -26,9 +26,9 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(matlab-mode-install-path (quote ("/Applications/MATLAB_R2014b.app/toolbox/")))
+ '(matlab-mode-install-path (quote ("/Applications/MATLAB_R2015b.app/toolbox/")))
  '(matlab-shell-ask-MATLAB-for-completions nil)
- '(matlab-shell-command "/Applications/MATLAB_R2014b.app/bin/matlab")
+ '(matlab-shell-command "/Applications/MATLAB_R2015b.app/bin/matlab")
  '(matlab-shell-enable-gud-flag t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.

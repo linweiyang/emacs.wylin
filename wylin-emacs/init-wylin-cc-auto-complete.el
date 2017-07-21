@@ -33,9 +33,11 @@
 ;; start google-c-style with emacs
 (require-package 'google-c-style)
 (require 'google-c-style)
-(add-hook 'c-mode-common-hook 'google-c-style)
+;;(add-hook 'c-mode-common-hook 'google-c-style)
+(add-hook 'c-mode-common-hook 'google-set-c-style)
 (add-hook 'c-mode-common-hook 'google-make-newline-indent)
-(add-hook 'c++-mode-common-hook 'google-c-style)
+;;(add-hook 'c++-mode-common-hook 'google-c-style)
+(add-hook 'c++-mode-common-hook 'google-set-c-style)
 (add-hook 'c++-mode-common-hook 'google-make-newline-indent)
 
 ;; install cedet mode for true intellisensep
