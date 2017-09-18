@@ -23,7 +23,7 @@
 (defun my:flymake-google-init ()
   (require 'flymake-google-cpplint)
   (custom-set-variables
-   '(flymake-google-cpplint-command "/usr/local/bin/cpplint"))
+   '(flymake-google-cpplint-command "~/.emacs.d/lisp/wylin-emacs/mycpplint"))
   (flymake-google-cpplint-load)
   )
 (add-hook 'c-mode-hook 'my:flymake-google-init)
@@ -34,7 +34,10 @@
 (require-package 'google-c-style)
 (require 'google-c-style)
 (add-hook 'c-mode-common-hook 'google-set-c-style)
+(add-hook 'c-mode-common-hook 'google-make-newline-indent)
 (add-hook 'c++-mode-common-hook 'google-set-c-style)
+(add-hook 'c++-mode-common-hook 'google-make-newline-indent)
+
 
 ;; install cedet mode for true intellisensep
 (require 'semantic)
@@ -66,12 +69,13 @@
 ;; clang please see the youtube emacs C++
 
 ;; tab setting
-(defun my-c-mode-hook ()
-  (setq c-basic-offset 4          ;; 基本缩进宽度
+(defun my-c-tab-mode-hook ()
+  (setq c-basic-offset 2          ;; 基本缩进宽度
         indent-tabs-mode t        ;; 禁止空格替换Tab
-        default-tab-width 4));; 默认Tab宽度
-(add-hook 'c++-mode-hook 'my-c-mode-hook)
-(add-hook 'c-mode-hook 'my-c-mode-hook)
-
+        default-tab-width 2));; 默认Tab宽度
+(add-hook 'c++-mode-hook 'my-c-tab-mode-hook)
+(add-hook 'c-mode-hook 'my-c-tab-mode-hook)
 
 (provide 'init-wylin-cc-auto-complete)
+
+
