@@ -3,6 +3,7 @@
 ;; -----------------------------------------------------------------------------
 ;; Setting English Font
 (setq font_size 160)
+(set-face-attribute 'default nil :height font_size)
 
 ;; ignore terminal bell
 (setq ring-bell-function 'ignore)
