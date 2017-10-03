@@ -23,7 +23,10 @@
 (defun my:flymake-google-init ()
   (require 'flymake-google-cpplint)
   (custom-set-variables
-   '(flymake-google-cpplint-command "~/.emacs.d/lisp/wylin-emacs/mycpplint"))
+   '(flymake-google-cpplint-command
+     (if (*is-a-mac*) ("cpplint") ("cpplint")))
+   '(flymake-google-cpplint-verbose "--verbose=0")
+   '(flymake-google-cpplint-filter "--filter=-whitespace/tab,+whitespace/ending_newline"))
   (flymake-google-cpplint-load)
   )
 (add-hook 'c-mode-hook 'my:flymake-google-init)
