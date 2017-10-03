@@ -1,2 +1,0 @@
-#!/usr/bin/env bash
-/usr/local/bin/cpplint  --filter=-whitespace/tab,+whitespace/ending_newline "$@"

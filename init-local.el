@@ -2,7 +2,7 @@
 ;; setting font for mac system
 ;; -----------------------------------------------------------------------------
 ;; Setting English Font
-(setq font_size 160)
+(setq font_size 140)
 (set-face-attribute 'default nil :height font_size)
 
 ;; ignore terminal bell
@@ -23,7 +23,7 @@
 ;;(require 'init-chinese-code)
 (require 'init-plantuml)
 (require 'init-cuda)
-(require 'init-cmake-ide)
+;;(require 'init-cmake-ide)
 (require 'init-maxima)
 (require 'init-wylin-org)
 (require 'init-wylin-swiper)

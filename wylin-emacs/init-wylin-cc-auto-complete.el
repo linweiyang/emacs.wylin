@@ -22,9 +22,12 @@
 (require-package 'flymake-google-cpplint)
 (defun my:flymake-google-init ()
   (require 'flymake-google-cpplint)
+  (cond
+   ((eq system-type 'windows-nt) (setq cpplint-name "cpplint.exe"))
+   (t (setq cpplint-name "cpplint"))
+   )
   (custom-set-variables
-   '(flymake-google-cpplint-command
-     (if (*is-a-mac*) ("cpplint") ("cpplint")))
+   '(flymake-google-cpplint-command 'cpplint-name)
    '(flymake-google-cpplint-verbose "--verbose=0")
    '(flymake-google-cpplint-filter "--filter=-whitespace/tab,+whitespace/ending_newline"))
   (flymake-google-cpplint-load)
