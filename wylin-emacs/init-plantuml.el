@@ -1,13 +1,10 @@
 (require-package 'plantuml-mode)
 (require 'plantuml-mode)
 
-;; active Org-babel languages
-(org-babel-do-load-languages
- 'org-babel-load-languages
- '(;; other Babel languages
-   (plantuml . t)))
-
-(setq org-plantuml-jar-path
-      (expand-file-name "~/.emacs.d/lisp/wylin-emacs/plantuml.jar"))
+(let ((jar-name "plantuml.jar")
+      (url "https://jaist.dl.sourceforge.net/project/plantuml/plantuml.jar"))
+  (setq org-plantuml-jar-path (expand-file-name jar-name (file-name-directory user-init-file)))
+  (unless (file-exists-p org-plantuml-jar-path)
+    (url-copy-file url org-plantuml-jar-path)))
 
 (provide 'init-plantuml)
