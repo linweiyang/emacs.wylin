@@ -22,23 +22,24 @@
 (require-package 'flymake-google-cpplint)
 (defun my:flymake-google-init ()
   (require 'flymake-google-cpplint)
-  (cond
-   ((eq system-type 'windows-nt) (setq cpplint-name "cpplint.exe"))
-   (t (setq cpplint-name "cpplint"))
-   )
+  (if (eq system-type 'windows-nt)
+      (custom-set-variables
+       '(flymake-google-cpplint-command "cpplint.exe"))      
+    (custom-set-variables
+     '(flymake-google-cpplint-command "cpplint")))
+
   (custom-set-variables
-   '(flymake-google-cpplint-command 'cpplint-name)
    '(flymake-google-cpplint-verbose "--verbose=0")
-   '(flymake-google-cpplint-filter "--filter=-whitespace/tab,+whitespace/ending_newline"))
+   '(flymake-google-cpplint-filter "--filter=-whitespace/tab,+whitespace/ending_newline"))  
   (flymake-google-cpplint-load)
   )
-(add-hook 'c-mode-hook 'my:flymake-google-init)
-(add-hook 'c++-mode-hook 'my:flymake-google-init)
-;; Flymake-google-style-mode
+  (add-hook 'c-mode-hook 'my:flymake-google-init)
+  (add-hook 'c++-mode-hook 'my:flymake-google-init)
+  ;; Flymake-google-style-mode
 
-;; start google-c-style with emacs
-(require-package 'google-c-style)
-(require 'google-c-style)
+  ;; start google-c-style with emacs
+  (require-package 'google-c-style)
+  (require 'google-c-style)
 (add-hook 'c-mode-common-hook 'google-set-c-style)
 (add-hook 'c-mode-common-hook 'google-make-newline-indent)
 (add-hook 'c++-mode-common-hook 'google-set-c-style)
@@ -76,9 +77,9 @@
 
 ;; tab setting
 (defun my-c-tab-mode-hook ()
-  (setq c-basic-offset 2          ;; 基本缩进宽度
-        indent-tabs-mode t        ;; 禁止空格替换Tab
-        default-tab-width 2));; 默认Tab宽度
+  (setq c-basic-offset 2          ;; 2 spaces for tabs
+        indent-tabs-mode t        ;; using Tab
+        default-tab-width 2))     ;; default width of Tab
 (add-hook 'c++-mode-hook 'my-c-tab-mode-hook)
 (add-hook 'c-mode-hook 'my-c-tab-mode-hook)
 

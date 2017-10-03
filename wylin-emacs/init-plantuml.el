@@ -1,3 +1,8 @@
+;;; package --- plantuml mode
+;;; Commentary:
+;;; unsing plantuml.jar for org
+;;; Code:
+
 (require-package 'plantuml-mode)
 (require 'plantuml-mode)
 
@@ -8,3 +13,4 @@
     (url-copy-file url org-plantuml-jar-path)))
 
 (provide 'init-plantuml)
+;;; init-plantuml.el ends here
