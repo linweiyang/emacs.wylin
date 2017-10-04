@@ -2,8 +2,7 @@
 ;; setting font for mac system
 ;; -----------------------------------------------------------------------------
 ;; Setting English Font
-(setq font_size 140)
-(set-face-attribute 'default nil :height font_size)
+;; using M-x customize-face [RTN] to setting the face
 
 ;; ignore terminal bell
 (setq ring-bell-function 'ignore)
