@@ -10,6 +10,9 @@
   (setq TeX-parse-self t)
   (setq-default TeX-master nil)
 
+  (add-to-list 'TeX-command-list '("XeLaTeX" "%`xelatex%(mode)%' %t" TeX-run-TeX nil t))
+  ;; (setq TeX-command-default "XeLaTeX")
+
   (cond
    ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
    ;; Latex for Emacs in Windows
@@ -81,13 +84,6 @@
 ;; setting auctex, added by wylin
 (add-hook 'LaTeX-mode-hook 'wylin:auctex-init)
 
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; (add-hook 'LaTeX-mode-hook                                                                         ;;
-;;           (lambda()                                                                                     ;;
-;;             (add-to-list 'TeX-command-list '("XeLaTeX" "%`xelatex%(mode)%' %t" TeX-run-TeX nil t)) ;;
-;;             (setq TeX-command-default "XeLaTeX")))                                                 ;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;;'(Latex-command "latex -synctex=1")
 
