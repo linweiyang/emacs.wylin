@@ -22,7 +22,7 @@
 ;;(require 'init-chinese-code)
 (require 'init-plantuml)
 (require 'init-cuda)
-;;(require 'init-cmake-ide)
+(require 'init-cmake-ide)
 (require 'init-maxima)
 (require 'init-wylin-org)
 (require 'init-wylin-swiper)
