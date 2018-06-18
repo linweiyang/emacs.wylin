@@ -1,5 +1,5 @@
 (require-package 'yasnippet)
-(require-package 'yasnippet-snippet)
+(require-package 'yasnippet-snippets)
 (require 'yasnippet)
 
 (yas-global-mode 1)
