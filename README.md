@@ -33,14 +33,7 @@ This emacs configuration is based on [Purcell's emacs configuration](https://git
     ``` shell
     git clone https://github.com/linweiyang/emacs.wylin
     cd emacs.wylin
-    cp init-local.el ~/.emacs.d/lisp/init-local.el
-    cp -r wylin-emacs ~/.emacs.d/lisp/wylin-emacs
-    ```
-
-    <font color=#ff0000>NOTE:</font> Recommend to use chinese elpa mirror in China.
-
-    ``` shell
-    cp mirror/init-elpa.el ~/.emacs.d/lisp/init-elpa.el
+    ./install.sh
     ```
 3. For google cpplint.
 
