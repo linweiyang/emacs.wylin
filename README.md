@@ -86,7 +86,7 @@ Rtags package for emacs needs helm packge, but the helm package only supports em
 1. Provided packages for Ubuntu LTS 14.04 and 16.04. Stable versions (25.1 currently):
 
     ``` shell
-    sudo apt-add-repository -y ppa:adrozdoff/emacs
+    sudo add-apt-repository ppa:kelleyk/emacs
     sudo apt update
     sudo apt install emacs25
     ```
